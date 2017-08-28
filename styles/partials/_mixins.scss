@@ -1,0 +1,42 @@
+// @include respond-to("small"){
+//   write styles here
+// }
+
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+
+ @else if $breakpoint == "medium" {
+    @media (max-width: 772px) {
+      @content;
+    }
+  }
+
+ @else if $breakpoint == "large" {
+    @media (max-width: 940px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "xlarge" {
+     @media (max-width: 1020px) {
+       @content;
+     }
+   }
+
+   @else if $breakpoint == "largest" {
+      @media (max-width: 1220px) {
+        @content;
+      }
+    }
+
+ @else {
+    @media ($breakpoint) {
+      @content;
+    }
+  }
+}
